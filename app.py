@@ -37,6 +37,7 @@ def plot_vehicle_types():
     df = load_data()
     st.header("Tipos de vehículos por fabricante")
     fig = px.bar(df, x="manufacturer", color="type", barmode="stack",
+                 labels={"manufacturer": "Fabricante"},
                  color_discrete_sequence=px.colors.qualitative.Pastel)
     st.plotly_chart(fig, use_container_width=True)
 
